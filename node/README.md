@@ -2,7 +2,7 @@
 
 ## Requis
 
-Ce test est prévu pour fonctionner avec `docker` et `docker-compose` et nous vous recommandons son utilisation (tout nos projets tourne sous docker en dev), néanmoins vous pouvez faire en sorte de le faire tourner directement sur votre poste via un autre système.
+Ce test est prévu pour fonctionner avec `docker` et `docker-compose` et nous vous recommandons son utilisation (tous nos projets tournent sous docker en dev), néanmoins vous pouvez faire en sorte de le faire tourner directement sur votre poste via un autre système.
 
 ## Installation
 
@@ -10,23 +10,23 @@ Avec docker rien de plus simple :
 
 `docker-compose up -d`
 
-L'api sera donc accessible sur [http://0.0.0.0:9000/](http://0.0.0.0:9000/) et devrait vous afficher `{"message":"Hello World"}`
+L'API sera donc accessible sur [http://0.0.0.0:9000/](http://0.0.0.0:9000/) et devrait vous afficher `{"message":"Hello World"}`
 
-Libre à vous de changer le port via le fichier docker-compose.yml si celui ci n'est pas disponible.
+Libre à vous de changer le port via le fichier docker-compose.yml si celui-ci n'est pas disponible.
 
 ## Environnement
 
-Le projet est configuré pour tourner avec node 12, néanmoins si vous décidiez de ne pas utiliser docker cela devrait fonctionner sans problème sur des versions inférieures ou suppérieures.
+Le projet est configuré pour tourner avec node 12, néanmoins si vous décidiez de ne pas utiliser docker cela devrait fonctionner sans problème sur des versions inférieures ou supérieures.
 
-Une config eslint est présente, vous pouvez lancer la commande `npm run lint` pour vérifier que tout est conforme
+Une config eslint est présente, vous pouvez lancer la commande `npm run lint` pour vérifier que tout est conforme.
 
 ## Sujet
 
-Le but du test est de créer une API node via Express (qui est déjà installé et configuré très sommairement) qui servirais de middleware afin de récupérer les informations d'un pays provenant de plusieurs sources de données (une api et un fichier).
+Le but du test est de créer une API node via Express (qui est déjà installé et configuré très sommairement) qui servirait de middleware afin de récupérer les informations d'un pays provenant de plusieurs sources de données (une api et un fichier).
 
 - API :
 
-La première source est l'api [http://restcountries.eu/](http://restcountries.eu/) qui permet de retourner les informations d'un Pays en fonction de son nom, son code...
+La première source est l'API [http://restcountries.eu/](http://restcountries.eu/) qui permet de retourner les informations d'un pays en fonction de son nom, son code...
 
 - Fichier :
 
