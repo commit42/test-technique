@@ -1,11 +1,12 @@
-version: "3"
-
+version: '3'
 services:
-  web:
-    build: .c42/docker/node
-    ports:
-      - 80
+  api:
+    build:
+      context: ./
+      dockerfile: ./docker/api/Dockerfile
+    environment:
+      - NODE_ENV=dev
     volumes:
-      - ./:/project
-      - .npm:/.npm
-      - $SSH_AUTH_SOCK:/ssh-agent
+      - ./src:/home/node/app/src
+    ports:
+      - 9000:9000
