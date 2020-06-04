@@ -36,12 +36,12 @@ Par exemple, un appel à [http://0.0.0.0:9000/country/FRA](http://0.0.0.0:9000/c
 
 ```json
 {
-    name: "France",
-    code: "FRA",
-    region: "Europe",
-    capital: "Paris",
-    president: "Emmanuel Macron",
-    anthem: "La Marseillaise"
+    "name": "France",
+    "code": "FRA",
+    "region": "Europe",
+    "capital": "Paris",
+    "president": "Emmanuel Macron",
+    "anthem": "La Marseillaise"
 }
 ```
 
