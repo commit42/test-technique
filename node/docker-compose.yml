@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    build: .c42/docker/node
+    ports:
+      - 80
+    volumes:
+      - ./:/project
+      - .npm:/.npm
+      - $SSH_AUTH_SOCK:/ssh-agent
