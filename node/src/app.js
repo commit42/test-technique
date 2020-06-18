@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-const config = require("config");
+const config = require("./config/dev.js");
 const routes = require("./routes");
 
 const app = express();
@@ -12,6 +12,7 @@ app.use(morgan("dev"));
 app.use("/", routes);
 
 const port = process.env.PORT || config.server.port;
+
 app.listen(port);
 console.log("Server started on port: " + port);
 
