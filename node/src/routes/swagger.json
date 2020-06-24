@@ -1,0 +1,108 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Test technique Node",
+    "description": "API agrégant http://restcountries.eu/ et un fichier CSV"
+  },
+  "tags": [
+    {
+      "name": "country",
+      "description": "Obtenir le détail d'un pays"
+    }
+  ],
+  "paths": {
+    "/countries": {
+      "get": {
+        "tags": [
+          "country"
+        ],
+        "summary": "Afficher la liste des pays avec leurs détails",
+        "description": "Retourne la liste des pays avec leurs détails",
+        "operationId": "getCountries",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Succès de l'opération",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Country"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/country/{countryCode}": {
+      "get": {
+        "tags": [
+          "country"
+        ],
+        "summary": "Chercher un pays par le code",
+        "description": "Retourne le détail d'un pays",
+        "operationId": "getCountryByCode",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "countryCode",
+            "in": "path",
+            "description": "Code du pays (3 caractères)",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Succès de l'opération",
+            "schema": {
+              "$ref": "#/definitions/Country"
+            }
+          },
+          "400": {
+            "description": "Code pays invalide"
+          },
+          "404": {
+            "description": "Pays non touvé"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Country": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "capital": {
+          "type": "string"
+        },
+        "president": {
+          "type": "string"
+        },
+        "anthem": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Country"
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "En savoir plus",
+    "url": "https://github.com/commit42/test-technique/tree/master/node"
+  }
+}

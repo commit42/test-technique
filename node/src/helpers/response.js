@@ -30,6 +30,13 @@ exports.sendNotFound = function(res) {
   });
 };
 
+exports.sendBadParameter = function(res) {
+  return res.status(405).send({
+    success: false,
+    message: 'The parameter is not good, the format should be {FRA}.'
+  });
+};
+
 exports.setHeadersForCORS = function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, X-Access-Token, Content-Type, Accept");
