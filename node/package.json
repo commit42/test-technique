@@ -7,8 +7,10 @@
     "lint": "eslint --max-warnings=0 --ignore-path .gitignore src"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "config": "^3.3.1",
+    "csvtojson": "^2.0.10",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
   },
