@@ -16,9 +16,7 @@ Libre à vous de changer le port via le fichier docker-compose.yml si celui-ci n
 
 ## Environnement
 
-Le projet est configuré pour tourner avec node 12, néanmoins si vous décidiez de ne pas utiliser docker cela devrait fonctionner sans problème sur des versions inférieures ou supérieures.
-
-Une config eslint est présente, vous pouvez lancer la commande `npm run lint` pour vérifier que tout est conforme.
+Pour lancer le programme utiliser la commande : `node app.js` qui ecoute sur le port 3000.
 
 ## Sujet
 
